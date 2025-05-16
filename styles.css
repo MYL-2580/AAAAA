@@ -1,0 +1,427 @@
+/* 旅游攻略网站样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+/* General styles */
+body {
+    line-height: 1.6;
+    background-color: #F5F5DC;
+    color: #8B4513;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #8B4513;
+    text-shadow: 2px 2px #D2B48C;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.3em;
+    color: #A0522D;
+    margin-bottom: 20px;
+}
+
+/* Search container */
+.search-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.search-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.suggestion-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Image gallery */
+.image-gallery {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.image-gallery h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-button {
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #8B4513;
+    color: #F5F5DC;
+    border: 2px solid #A0522D;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.gallery-button:hover {
+    background-color: #A0522D;
+    transform: scale(1.1);
+}
+
+/* Enhanced Image Gallery Styles */
+.gallery-images {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+.gallery-item {
+    position: relative;
+    flex-shrink: 0;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover img {
+    opacity: 0.9;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #F5F5DC;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(-10px);
+}
+
+/* 统一图片样式 */
+.gallery-images img,
+.attraction-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-images img:hover,
+.attraction-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styles */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-section h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input,
+select {
+    font-size: 1em;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+select {
+    appearance: none;
+    background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23333" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>') no-repeat right 10px center;
+    background-color: white;
+    background-size: 10px;
+}
+
+.checkbox-group,
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-item,
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.checkbox-item label,
+.radio-item label {
+    font-size: 1em;
+    color: #333;
+}
+
+button[type="submit"] {
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #8B4513;
+    color: #F5F5DC;
+    border: 2px solid #A0522D;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #A0522D;
+}
+
+/* Results container */
+.results-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.results-container h2 {
+    font-size: 1.8em;
+    color: #2E8B57;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #8B4513;
+    color: #F5F5DC;
+    margin-top: 30px;
+    border-top: 5px solid #A0522D;
+}
+
+/* Northwest Style Theme */
+body.northwest-theme {
+    background-color: #F5F5DC;
+}
+
+header.northwest-theme {
+    background-color: #DEB887;
+    padding: 20px;
+    border-bottom: 5px solid #8B4513;
+}
+
+header.northwest-theme h1 {
+    color: #8B4513;
+    text-shadow: 2px 2px #D2B48C;
+}
+
+header.northwest-theme p {
+    color: #A0522D;
+}
+
+button.northwest-theme {
+    background-color: #8B4513;
+    color: #F5F5DC;
+    border: 2px solid #A0522D;
+}
+
+button.northwest-theme:hover {
+    background-color: #A0522D;
+}
+
+/* Northwest Style Card */
+.card.northwest-theme {
+    background-color: #F5F5DC;
+    border: 2px solid #8B4513;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card.northwest-theme:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Northwest Style Title Decoration */
+h2.northwest-theme {
+    font-family: 'Georgia', serif;
+    color: #8B4513;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+h2.northwest-theme::before,
+h2.northwest-theme::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #8B4513;
+    margin: 10px auto;
+}
+
+/* Northwest Style List */
+ul.northwest-theme {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.northwest-theme li {
+    background-color: #DEB887;
+    color: #8B4513;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+ul.northwest-theme li:hover {
+    background-color: #A0522D;
+    transform: translateX(10px);
+}
+
+.tag {
+    display: inline-block;
+    background-color: #DEB887;
+    color: #8B4513;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.recommendation {
+    background-color: #F5F5DC;
+    border: 2px solid #8B4513;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recommendation:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #8B4513;
+    color: #F5F5DC;
+    border: 2px solid #A0522D;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #A0522D;
+}

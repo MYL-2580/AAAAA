@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西北5A级景区旅游攻略</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="northwest-theme">
+    <div class="container">
+        <header class="northwest-theme">
+            <h1 id="dynamic-greeting">欢迎来到西北5A级景区旅游攻略</h1>
+            <p>根据您的喜好和需求，为您量身定制最适合的西北5A级景区旅游方案</p>
+        </header>
+
+        <div class="search-container">
+            <h2 class="northwest-theme">快速搜索景点</h2>
+            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px; position: relative;">
+                <input type="text" id="search-input" placeholder="请输入景点名称" aria-label="搜索景点名称"
+                    style="flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                <div id="suggestion-list" class="suggestion-list"></div>
+                <button id="search-button" class="northwest-theme">搜索</button>
+            </div>
+        </div>
+
+        <div class="image-gallery">
+            <h2 class="northwest-theme">精选景点图片</h2>
+            <div class="gallery-container">
+                <button class="gallery-button northwest-theme" id="prev-button">&lt;</button>
+                <div class="gallery-images" id="gallery-images">
+                    <!-- 图片将通过 JavaScript 动态加载 -->
+                </div>
+                <button class="gallery-button northwest-theme" id="next-button">&gt;</button>
+            </div>
+        </div>
+
+        <form id="search-form">
+            <div class="form-section">
+                <h2 class="northwest-theme">个人信息</h2>
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">性别</label>
+                    <select id="gender" name="gender" required>
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="age">年龄</label>
+                    <input type="number" id="age" name="age" min="1" max="120" placeholder="请输入您的年龄" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type="email" id="email" name="email" placeholder="请输入您的邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">电话号码</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="请输入您的电话号码"
+                        required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2 class="northwest-theme">旅游偏好</h2>
+                <div class="form-group">
+                    <label for="destination">目的地</label>
+                    <select id="destination" name="destination" required>
+                        <option value="甘肃">甘肃省（历史古迹，自然风光）</option>
+                        <option value="青海">青海省（自然风光，民俗文化，宗教文化）</option>
+                        <option value="宁夏">宁夏省（自然风光，民俗文化，历史古迹）</option>
+                        <option value="新疆">新疆维吾尔族自治区（自然风光，民俗文化，历史古迹）</option>
+                        <option value="陕西">陕西省（历史古迹，红色文化，自然风光）</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="travel-type">旅游类型</label>
+                    <select id="travel-type" name="travel-type" required>
+                        <option value="历史古迹">历史古迹</option>
+                        <option value="自然风光">自然风光</option>
+                        <option value="民俗文化">民俗文化</option>
+                        <option value="红色文化">红色文化</option>
+                        <option value="宗教文化">宗教文化</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="budget">预算金额 (人民币)</label>
+                    <input type="number" id="budget" name="budget" min="100" placeholder="请输入您的预算金额"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="travel-mode">旅游方式</label>
+                    <select id="travel-mode" name="travel-mode" required>
+                        <option value="自驾">自驾</option>
+                        <option value="跟团">跟团</option>
+                        <option value="自由行">自由行</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="northwest-theme">获取旅游推荐</button>
+        </form>
+    </div>
+    <footer class="northwest-theme">
+        <p>© 2025西北5A级景区旅游攻略. 版权所有.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
